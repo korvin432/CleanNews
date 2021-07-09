@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/news_dest">
+
+     <fragment
+        android:id="@+id/news_dest"
+        android:name="com.mindyapps.cleannews.ui.news.NewsFragment"
+        android:label="NewsFragment">
+        <action
+            android:id="@+id/actionToNewsFragment"
+            app:destination="@id/article_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/article_dest"
+        android:name="com.mindyapps.cleannews.ui.article.ArticleFragment"
+        android:label="ArticleFragment">
+        <argument
+            android:name="article"
+            app:argType="com.mindyapps.domain.entity.ArticleEntity" />
+    </fragment>
+</navigation>
